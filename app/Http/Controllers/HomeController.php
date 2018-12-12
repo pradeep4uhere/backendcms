@@ -26,4 +26,8 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function blank(Request $request){
+        return view('blank');
+    }
 }

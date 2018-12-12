@@ -1,7 +1,6 @@
-@extends('layouts.app')
-
-
+@extends('layouts.dashboard')
 @section('content')
+<div class="content-wrapper">
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
@@ -57,5 +56,5 @@
 
 {!! $data->render() !!}
 
-
+</div>
 @endsection
