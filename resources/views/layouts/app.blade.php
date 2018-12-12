@@ -14,10 +14,17 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+<style type="text/css">
+    body{
+            background-image: url(img/bg.png);
+            opacity: 1.0;
+        }
+                
+</style>
 <body>
-    <div id="app">
+    <div id="app"  style="height: 100%;">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -35,8 +42,6 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
                             <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
                             <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
@@ -69,8 +74,8 @@
         </nav>
 
 
-        <main class="py-4">
-            <div class="container">
+        <main class="py-4"  >
+            <div class="container" style="position: relative;">
             @yield('content')
             </div>
         </main>
